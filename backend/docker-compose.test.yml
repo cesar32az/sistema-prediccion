@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  test:
+    container_name: test-tsc
+    build: .
+    links:
+      - mongo-test
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - ./.env.dev
+    environment: 
+      - NODE_ENV=development
+      - MONGODB_HOST=mongo-test
+    command: npm run test
+    depends_on:
+      - mongo-test
+  mongo-test:
+    container_name: test-db
+    image: mongo
+    volumes:
+      - test_data:/data/db
+    logging:
+      driver: none
+volumes: 
+  test_data:

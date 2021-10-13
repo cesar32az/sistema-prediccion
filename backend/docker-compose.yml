@@ -1,0 +1,33 @@
+version: '3.7'
+services:
+  node:
+    container_name: ts-node
+    restart: always
+    build: .
+    ports:
+      - 4000:4000
+    links:
+      - mongo
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - ./.env.dev
+    environment: 
+      - MONGODB_HOST=mongo
+    command: npm run dev
+    depends_on:
+      - mongo
+  mongo:
+    container_name: ts-mongodb
+    image: mongo
+    ports:
+      - 27019:27017
+    volumes:
+      - mongo_data:/data/db
+    logging:
+      driver: none
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=julio123
+volumes: 
+  mongo_data:

@@ -6,18 +6,18 @@ const expedientSchema = new Schema(
     expedient: { type: String, required: true, trim: true },
     consults: [
       {
-        date: Date.now(),
+        date: Date,
         morbilidad: [
           {
-            name: { type: String, required: true },
-            codigo: { type: String, required: true },
+            name: { type: String },
+            codigo: { type: String },
           },
         ],
         medicaments: [
           {
-            name: { type: String, required: true },
-            presentation: { type: String, required: true },
-            cantity: { type: Number, required: true },
+            name: { type: String },
+            presentation: { type: String },
+            cantity: { type: Number },
           },
         ],
       },

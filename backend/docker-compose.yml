@@ -2,7 +2,6 @@ version: '3.7'
 services:
   node:
     container_name: ts-node
-    restart: always
     build: .
     ports:
       - 4000:4000
@@ -11,7 +10,7 @@ services:
     volumes:
       - .:/usr/src/app
     env_file:
-      - ./.env.dev
+      - ./.env
     environment: 
       - MONGODB_HOST=mongo
     command: npm run dev

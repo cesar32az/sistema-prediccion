@@ -6,7 +6,7 @@ const environment = process.env.NODE_ENV;
 if (environment === 'production') {
   dotenv.config();
 } else {
-  dotenv.config({ path: path.resolve(process.cwd(), '.env.dev') });
+  dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 }
 
 export default {

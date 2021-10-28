@@ -78,3 +78,17 @@ export const updatePatient: RequestHandler = async (req, res): Promise<Response>
     return res.status(400).json(error);
   }
 };
+
+export const deleteAllPatients: RequestHandler = async (req, res): Promise<Response> => {
+  try {
+    const patient: IPatient[] | null = await Patient.find()
+
+    if (!patient) return res.status(400).json({ message: "Patients not found" });
+
+    Patient.deleteMany()
+
+    return res.status(200).json({ message: "All patients deleted" });
+  } catch (error) {
+    return res.status(400).json(error);
+  }
+}

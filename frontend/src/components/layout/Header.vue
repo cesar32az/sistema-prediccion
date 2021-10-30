@@ -16,7 +16,7 @@
         ></v-img>
       </template>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-      <v-toolbar-title>StatsApp</v-toolbar-title>
+      <v-toolbar-title>Centro de Salud de Sacatepéquez</v-toolbar-title>
       <v-spacer />
       <v-tooltip bottom color="primary">
         <template v-slot:activator="{ on, attrs }">
@@ -40,25 +40,39 @@
           <v-list-group prepend-icon="mdi-calendar-check" no-action>
             <template v-slot:activator>
               <v-list-item-content>
-                <v-list-item-title>Presupuesto</v-list-item-title>
+                <v-list-item-title>Consultas</v-list-item-title>
               </v-list-item-content>
             </template>
-             <v-list-item link to="/gastos">
-              <v-list-item-title>Agregar gastos</v-list-item-title>
+             <v-list-item link to="/add-consulta">
+              <v-list-item-title>Agregar</v-list-item-title>
               <v-list-item-icon>
                 <v-icon>mdi-plus</v-icon>
               </v-list-item-icon>
             </v-list-item>
-            <v-list-item link to="/calendario">
-              <v-list-item-title>Calendario</v-list-item-title>
+            <v-list-item link to="/registros">
+              <v-list-item-title>Registros</v-list-item-title>
               <v-list-item-icon>
                 <v-icon>mdi-calendar</v-icon>
               </v-list-item-icon>
             </v-list-item>
-             <v-list-item link to="/presupuesto">
-              <v-list-item-title>Modificar</v-list-item-title>
+          </v-list-group>
+          <v-list-group prepend-icon="mdi-account-multiple" no-action>
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title>Pacientes</v-list-item-title>
+              </v-list-item-content>
+            </template>
+       
+            <v-list-item link to="/add-paciente">
+              <v-list-item-title>Agregar</v-list-item-title>
               <v-list-item-icon>
-                <v-icon>mdi-pencil</v-icon>
+                <v-icon>mdi-account-multiple-plus</v-icon>
+              </v-list-item-icon>
+            </v-list-item>
+             <v-list-item link to="/pacientes">
+              <v-list-item-title>Buscar</v-list-item-title>
+              <v-list-item-icon>
+                <v-icon>mdi-magnify-scan</v-icon>
               </v-list-item-icon>
             </v-list-item>
           </v-list-group>

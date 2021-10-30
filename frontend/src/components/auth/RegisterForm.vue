@@ -89,46 +89,13 @@
                   <v-col cols="12" md="6">
                     <v-text-field
                       class="mx-5"
-                      label="Ingresa tu apellido"
+                      label="Ingresa tu usuario"
                       prepend-icon="mdi-account"
                       outlined
-                      v-model="register.lastName"
+                      v-model="register.username"
                       :rules="rulesCamp"
                       validate-on-blur
                     />
-                  </v-col>
-                </v-row>
-                <v-row justify="center">
-                  <v-col cols="12" md="6">
-                    <!-- Fecha de nacimiento -->
-                    <v-menu
-                      v-model="menu"
-                      :close-on-content-click="false"
-                      :nudge-right="40"
-                      transition="scale-transition"
-                      offset-y
-                      min-width="290px"
-                    >
-                      <template v-slot:activator="{ on, attrs }">
-                        <v-text-field
-                          class="mx-5"
-                          v-model="register.birthDate"
-                          label="Selecciona tu fecha de nacimiento"
-                          prepend-icon="mdi-calendar"
-                          readonly
-                          v-bind="attrs"
-                          v-on="on"
-                          outlined
-                        ></v-text-field>
-                      </template>
-                      <v-date-picker
-                        color="primary"
-                        min="1940-01"
-                        :max="hoy"
-                        v-model="register.birthDate"
-                        @input="menu = false"
-                      ></v-date-picker>
-                    </v-menu>
                   </v-col>
                 </v-row>
                 <v-row justify="center">
@@ -170,11 +137,9 @@ export default {
     return {
       register: {
         name: '',
-        lastName: '',
+        username: '',
         email: '',
         password: '',
-        name: '',
-        birthDate: '',
       },
       e1: 1,
       menu: false,

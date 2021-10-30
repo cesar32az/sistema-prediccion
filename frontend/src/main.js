@@ -14,10 +14,14 @@ const base = axios.create({
   baseURL: "http://localhost:4000",
 });
 Vue.prototype.$http = base;
+
 Vue.config.productionTip = false;
+
+
 new Vue({
   router,
   store,
   vuetify,
   render: (h) => h(App),
 }).$mount("#app");
+

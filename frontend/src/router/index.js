@@ -18,20 +18,26 @@ const routes = [
         component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
       },
       {
-        path: '/gastos',
-        name: 'Gastos',
-        component: () => import(/* webpackChunkName: "gastos" */ '../views/Gastos.vue'),
+        path: '/add-paciente',
+        name: 'AgregarPaciente',
+        component: () => import(/* webpackChunkName: "add-paciente" */ '../views/paciente/AgregarPaciente..vue'),
       },
       {
-        path: '/calendario',
-        name: 'Calendario',
-        component: () => import(/* webpackChunkName: "calendario" */ '../views/Calendario.vue'),
+        path: '/pacientes',
+        name: 'ListarPacientes',
+        component: () => import(/* webpackChunkName: "pacientes" */ '../views/paciente/ListarPacientes.vue'),
       },
       {
-        path: '/presupuesto',
-        name: 'Presupuesto',
-        component: () => import(/* webpackChunkName: "presupuesto" */ '../views/Presupuesto.vue'),
+        path: '/add-consulta',
+        name: 'AgregarConsulta',
+        component: () => import(/* webpackChunkName: "add-consulta" */ '../views/consultas/Agregar.vue'),
       },
+      {
+        path: '/registros',
+        name: 'Registros',
+        component: () => import(/* webpackChunkName: "registros" */ '../views/consultas/Registros.vue'),
+      },
+
     ],
   },
   {

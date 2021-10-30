@@ -25,7 +25,7 @@ export default {
     async getUser() {
       try {
         let token = localStorage.getItem('jwt');
-        let response = await this.$http.get('/api/user/profile', {
+        let response = await this.$http.get('/api/user', {
           headers: { 'x-access-token': token },
         });
         this.setProfile(response.data.user);

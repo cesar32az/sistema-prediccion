@@ -33,7 +33,7 @@ class AuthService {
     }
   }
   async getUser() {
-    let response = await axios.get(API_URL + 'profile', {
+    let response = await axios.get('http://localhost:4000/api/user', {
       headers: authHeader(),
     });
     let user = response.data.user;

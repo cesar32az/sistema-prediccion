@@ -76,11 +76,11 @@
               </v-list-item-icon>
             </v-list-item>
           </v-list-group>
-          <v-list-item link to="/ajustes" exact>
+          <v-list-item link to="/graficas" exact>
             <v-list-item-icon>
-              <v-icon>mdi-cog</v-icon>
+              <v-icon>mdi-chart-bar</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Ajustes</v-list-item-title>
+            <v-list-item-title>Gráficas</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>

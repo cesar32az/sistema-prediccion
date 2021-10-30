@@ -17,7 +17,7 @@ const expedientSchema = new Schema(
           {
             name: { type: String },
             presentation: { type: String },
-            cantity: { type: Number },
+            cantity: { type: Number, default: 0 },
           },
         ],
       },

@@ -20,24 +20,33 @@ const routes = [
       {
         path: '/add-paciente',
         name: 'AgregarPaciente',
-        component: () => import(/* webpackChunkName: "add-paciente" */ '../views/paciente/AgregarPaciente..vue'),
+        component: () =>
+          import(/* webpackChunkName: "add-paciente" */ '../views/paciente/AgregarPaciente..vue'),
       },
       {
         path: '/pacientes',
         name: 'ListarPacientes',
-        component: () => import(/* webpackChunkName: "pacientes" */ '../views/paciente/ListarPacientes.vue'),
+        component: () =>
+          import(/* webpackChunkName: "pacientes" */ '../views/paciente/ListarPacientes.vue'),
       },
       {
         path: '/add-consulta',
         name: 'AgregarConsulta',
-        component: () => import(/* webpackChunkName: "add-consulta" */ '../views/consultas/Agregar.vue'),
+        component: () =>
+          import(/* webpackChunkName: "add-consulta" */ '../views/consultas/Agregar.vue'),
       },
       {
         path: '/registros',
         name: 'Registros',
-        component: () => import(/* webpackChunkName: "registros" */ '../views/consultas/Registros.vue'),
+        component: () =>
+          import(/* webpackChunkName: "registros" */ '../views/consultas/Registros.vue'),
       },
-
+      {
+        path: '/graficas',
+        name: 'Graficas',
+        component: () =>
+          import(/* webpackChunkName: "graficas" */ '../views/Graficas.vue'),
+      },
     ],
   },
   {

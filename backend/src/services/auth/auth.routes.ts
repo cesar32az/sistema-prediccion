@@ -6,7 +6,7 @@ const router: Router = Router();
 const verify = [verifySignup.checkDuplicates, verifySignup.checkRolesExisted];
 
 router
-  .post('/signup', verify, signup)
-  .post('/signin', signin);
+  .post('/register', verify, signup)
+  .post('/login', signin);
 
 export default router;

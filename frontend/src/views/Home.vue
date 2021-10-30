@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <Profile />
-
+    <v-img src="img/vacuno.jpg"></v-img>
   </v-container>
 </template>
 

@@ -23,7 +23,7 @@ export const signup: RequestHandler = async (req, res): Promise<Response> => {
     const userSaved: IUser = await newUser.save();
     const token: string = createToken(userSaved);
 
-    return res.status(201).json({ token, user: userSaved });
+    return res.status(201).json({ token, user: userSaved, message: "Usuario creado con éxito!" });
   } catch (error) {
     console.log(error);
     return res.status(400).json({ error });
@@ -42,7 +42,7 @@ export const signin: RequestHandler = async (req, res): Promise<Response> => {
     if (!match) return res.status(400).json({ message: 'Invalid password' });
     // crear token
     const token: string = createToken(user);
-    return res.json({ token, user });
+    return res.json({ token, user, message: "Bienvenido!!!" });
   } catch (error) {
     console.error({ error });
     return res.status(400).json({ error: 'hi' });

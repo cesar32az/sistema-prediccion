@@ -5,7 +5,7 @@ export interface IExpedient extends Document {
   consults: [
     {
       date: Date;
-      moribilidad: [{ name: string; codigo: string }];
+      morbilidad: [{ name: string; codigo: string }];
       medicaments: [{ name: string; presentation: string; cantity: number }];
     },
   ];
